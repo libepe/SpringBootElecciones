@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <header class="text-center mb-3">
+        <img class="logoweb" src="/images/logoweb.png" alt="logoweb">
+        <h1>YOUR POLLS</h1>
+    </header>
+    <br>
+    <div id="territory-container" class="text-center">
+        <select id="territories" class="form-control">
+            <option value="" selected>State Polls</option>
+            <option value="/pennsylvania">Pennsylvania</option>
+            <option value="/georgia">Georgia</option>
+            <option value="/wisconsin">Wisconsin</option>
+            <option value="/northcarolina">North Carolina</option>
+            <option value="/michigan">Michigan</option>
+            <option value="/arizona">Arizona</option>
+            <option value="/nevada">Nevada</option>
+            <option value="/national">National</option>
+        </select>
+        <br>
+        <div id="map"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/mapdata.js"></script>
+    <script src="js/usmap.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Poll</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+ 
+</head>
+ 
+<body>
+    <h2>Delete Poll</h2>
+    <!-- Lo primero es hacer un formulario con los campos de autor, en este caso el nombre
+    -->
+    <form th:action="@{/pollings/delete/{id}(id=${polling.idpolling})}" th:object="${polling}" method="POST">
+        <input type="hidden" th:field="*{idpolling}" id="idpolling">
+ 
+        <label for="poll_name">Delete Poll Name</label>
+        <!-- el campo hace referencia a la propiedad nombre -->
+        <input type="text" th:field="*{poll_name}" id="poll_name" placeholder="Poll Name" readonly>
+        <label for="poll_date">Delete Poll Date</label>
+        <!-- el campo hace referencia a la propiedad nombre -->
+        <input type="date" th:field="*{poll_date}" id="poll_date" readonly>
+         <label for="poll_result">Delete Poll Results</label>
+        <!-- el campo hace referencia a la propiedad nombre -->
+        <input type="number" th:field="*{poll_result}" id="poll_result" readonly>
+        <input class="btn btn-success" type="submit" value="Delete">
+    <a class="btn btn-primary" th:href="@{/pollings}">Back to List</a>
+ 
+    </form>
+</body>
+ 
+</html>

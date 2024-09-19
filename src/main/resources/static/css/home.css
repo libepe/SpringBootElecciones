@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+body{
+	background-color: #D2DCFE;
+}
+
+h1 {
+    font-family: 'Fakedes', serif;
+    font-weight: bold;
+    font-size: 3vw;
+    color: white;
+    padding-left: 50px;
+    background: linear-gradient(90deg, white, white, red, blue, white, white);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shine 3s infinite linear;
+    position: relative;
+}
+
+@keyframes shine {
+    0% {
+        background-position: 200%;
+    }
+    100% {
+        background-position: -200%;
+    }
+}
+
+#territory-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#territories {
+    border-radius: 20px;
+    border: 3px solid blue;
+    font-weight: bold;
+    width: 100%;
+    max-width: 600px;
+    padding: 12px;
+    z-index: 2;
+    box-shadow: 0 4px 8px 0 black;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    background-image: none;
+    background-color: #fff;
+    font-size: 16px;
+    color: #000;
+    box-sizing: border-box;
+    height: auto;
+    max-height: 400px;
+    margin: 0 auto;
+}
+
+#territories option {
+    color: blue;
+}
+
+#map {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: 20px auto;
+    border: 5px solid transparent;
+    border-image: linear-gradient(45deg, red, blue) 1;
+    background: white;
+    box-shadow: 0 4px 8px 0 black;
+    z-index: 2;
+}
+
+header {
+    height: 150px;
+    width: 100%;
+    background: linear-gradient(45deg, red, blue);
+    box-shadow: 0 4px 8px 0 black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.logoweb {
+    max-width: 120px;
+    margin: 0;
+}
+
+.logoweb img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 2.5vw;
+        padding-left: 30px;
+    }
+
+    #territories {
+        max-width: 500px;
+        font-size: 15px;
+    }
+
+    #map {
+        max-width: 900px;
+    }
+
+    .logoweb {
+        max-width: 100px;
+    }
+
+    .logoweb img {
+        max-width: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2vw;
+        padding-left: 20px;
+    }
+
+    #territories {
+        max-width: 400px;
+        font-size: 14px;
+    }
+
+    #map {
+        max-width: 800px;
+    }
+
+    .logoweb {
+        max-width: 80px;
+    }
+
+    .logoweb img {
+        max-width: 150px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5vw;
+        padding-left: 10px;
+    }
+
+    #territories {
+        max-width: 300px;
+        font-size: 13px;
+    }
+
+    #map {
+        max-width: 600px;
+    }
+
+    .logoweb {
+        max-width: 60px;
+    }
+
+    .logoweb img {
+        max-width: 100px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+}
